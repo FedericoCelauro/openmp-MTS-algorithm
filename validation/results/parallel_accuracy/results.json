@@ -1,0 +1,669 @@
+{
+  "config": {
+    "rc": "2.5",
+    "sigma": "1.0",
+    "epsilon": "1.0",
+    "mass1": "1.0",
+    "mass2": "100.0",
+    "NPartRatio": "0.1",
+    "dt": "0.04",
+    "T": "2.0",
+    "totsteps": "1250",
+    "nx": "4",
+    "ny": "4",
+    "nz": "4",
+    "rho": "0.5"
+  },
+  "summary": [
+    {
+      "name": "serial",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "max_abs_error": 0.08504307906741815,
+      "final_error": -0.0044181281770079295,
+      "max_energy_sum_discrepancy": 5.275779813018744e-13,
+      "max_U_sum_discrepancy": 4.831690603168681e-13,
+      "max_K_sum_discrepancy": 1.4210854715202004e-13
+    },
+    {
+      "name": "omp1",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "max_abs_error": 0.08504307906741815,
+      "final_error": -0.0044181281770079295,
+      "max_energy_sum_discrepancy": 5.275779813018744e-13,
+      "max_U_sum_discrepancy": 4.831690603168681e-13,
+      "max_K_sum_discrepancy": 1.4210854715202004e-13
+    },
+    {
+      "name": "omp4_0",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "max_abs_error": 0.0903706877078605,
+      "final_error": -0.011643436169862298,
+      "max_energy_sum_discrepancy": 1.580957587066223e-13,
+      "max_U_sum_discrepancy": 1.7053025658242404e-13,
+      "max_K_sum_discrepancy": 5.684341886080802e-14
+    },
+    {
+      "name": "omp4_1",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "max_abs_error": 0.14837293718730393,
+      "final_error": -0.09953472736893332,
+      "max_energy_sum_discrepancy": 1.6342482922482304e-13,
+      "max_U_sum_discrepancy": 1.7053025658242404e-13,
+      "max_K_sum_discrepancy": 5.684341886080802e-14
+    },
+    {
+      "name": "omp4_2",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "max_abs_error": 0.12090172029184032,
+      "final_error": -0.043221481146446195,
+      "max_energy_sum_discrepancy": 1.580957587066223e-13,
+      "max_U_sum_discrepancy": 1.4210854715202004e-13,
+      "max_K_sum_discrepancy": 5.684341886080802e-14
+    },
+    {
+      "name": "omp4_3",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "max_abs_error": 0.12429491478735599,
+      "final_error": -0.04736151010337153,
+      "max_energy_sum_discrepancy": 1.580957587066223e-13,
+      "max_U_sum_discrepancy": 1.4210854715202004e-13,
+      "max_K_sum_discrepancy": 5.684341886080802e-14
+    },
+    {
+      "name": "omp4_4",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "max_abs_error": 0.10138722178993476,
+      "final_error": -0.02525888100848306,
+      "max_energy_sum_discrepancy": 1.616484723854228e-13,
+      "max_U_sum_discrepancy": 1.4210854715202004e-13,
+      "max_K_sum_discrepancy": 5.684341886080802e-14
+    },
+    {
+      "name": "omp4_5",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "max_abs_error": 0.15091595252744128,
+      "final_error": -0.10407681881574149,
+      "max_energy_sum_discrepancy": 1.580957587066223e-13,
+      "max_U_sum_discrepancy": 1.4210854715202004e-13,
+      "max_K_sum_discrepancy": 5.684341886080802e-14
+    },
+    {
+      "name": "omp4_6",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "max_abs_error": 0.12620040796207377,
+      "final_error": -0.08889345399776971,
+      "max_energy_sum_discrepancy": 1.580957587066223e-13,
+      "max_U_sum_discrepancy": 1.4210854715202004e-13,
+      "max_K_sum_discrepancy": 5.684341886080802e-14
+    },
+    {
+      "name": "omp4_7",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "max_abs_error": 0.10020323090995475,
+      "final_error": 0.0010297417663593933,
+      "max_energy_sum_discrepancy": 1.5987211554602254e-13,
+      "max_U_sum_discrepancy": 1.4210854715202004e-13,
+      "max_K_sum_discrepancy": 5.684341886080802e-14
+    },
+    {
+      "name": "serial_ulp_0",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "max_abs_error": 0.08504307906741815,
+      "final_error": -0.0044181281770079295,
+      "max_energy_sum_discrepancy": 5.275779813018744e-13,
+      "max_U_sum_discrepancy": 4.831690603168681e-13,
+      "max_K_sum_discrepancy": 1.4210854715202004e-13
+    },
+    {
+      "name": "serial_ulp_1",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "max_abs_error": 0.08504307906741815,
+      "final_error": -0.0044181281770079295,
+      "max_energy_sum_discrepancy": 5.275779813018744e-13,
+      "max_U_sum_discrepancy": 4.831690603168681e-13,
+      "max_K_sum_discrepancy": 1.4210854715202004e-13
+    },
+    {
+      "name": "serial_ulp_2",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "max_abs_error": 0.08504307906741815,
+      "final_error": -0.0044181281770079295,
+      "max_energy_sum_discrepancy": 5.275779813018744e-13,
+      "max_U_sum_discrepancy": 4.831690603168681e-13,
+      "max_K_sum_discrepancy": 1.4210854715202004e-13
+    },
+    {
+      "name": "serial_ulp_3",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "max_abs_error": 0.08504307906741815,
+      "final_error": -0.0044181281770079295,
+      "max_energy_sum_discrepancy": 5.275779813018744e-13,
+      "max_U_sum_discrepancy": 4.831690603168681e-13,
+      "max_K_sum_discrepancy": 1.4210854715202004e-13
+    },
+    {
+      "name": "serial_ulp_4",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "max_abs_error": 0.08504307906741815,
+      "final_error": -0.0044181281770079295,
+      "max_energy_sum_discrepancy": 5.275779813018744e-13,
+      "max_U_sum_discrepancy": 4.831690603168681e-13,
+      "max_K_sum_discrepancy": 1.4210854715202004e-13
+    },
+    {
+      "name": "serial_ulp_5",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "max_abs_error": 0.16556730646775009,
+      "final_error": -0.0287655804867768,
+      "max_energy_sum_discrepancy": 5.275779813018744e-13,
+      "max_U_sum_discrepancy": 4.831690603168681e-13,
+      "max_K_sum_discrepancy": 1.4210854715202004e-13
+    },
+    {
+      "name": "serial_ulp_6",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "max_abs_error": 0.08504307906741815,
+      "final_error": -0.0044181281770079295,
+      "max_energy_sum_discrepancy": 5.275779813018744e-13,
+      "max_U_sum_discrepancy": 4.831690603168681e-13,
+      "max_K_sum_discrepancy": 1.4210854715202004e-13
+    },
+    {
+      "name": "serial_ulp_7",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "max_abs_error": 0.08504307906741815,
+      "final_error": -0.0044181281770079295,
+      "max_energy_sum_discrepancy": 5.275779813018744e-13,
+      "max_U_sum_discrepancy": 4.831690603168681e-13,
+      "max_K_sum_discrepancy": 1.4210854715202004e-13
+    }
+  ],
+  "same_state_tests": [
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 0,
+      "initial_force_max_absolute_difference": 1.6930901125533637e-15,
+      "initial_force_relative_scale_difference": 1.6930901125533637e-15,
+      "one_step_state_max_absolute_difference": 1.3877787807814457e-17,
+      "one_step_state_relative_scale_difference": 6.059690042405103e-18,
+      "one_step_force_max_absolute_difference": 1.5543122344752192e-15,
+      "one_step_force_relative_scale_difference": 4.618185964149064e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 1,
+      "initial_force_max_absolute_difference": 1.5543122344752192e-15,
+      "initial_force_relative_scale_difference": 1.5543122344752192e-15,
+      "one_step_state_max_absolute_difference": 4.336808689942018e-19,
+      "one_step_state_relative_scale_difference": 1.9477025009708191e-19,
+      "one_step_force_max_absolute_difference": 1.3322676295501878e-15,
+      "one_step_force_relative_scale_difference": 1.7286002243801862e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 2,
+      "initial_force_max_absolute_difference": 1.3322676295501878e-15,
+      "initial_force_relative_scale_difference": 1.7286002243801866e-16,
+      "one_step_state_max_absolute_difference": 1.1102230246251565e-16,
+      "one_step_state_relative_scale_difference": 5.471704849817357e-17,
+      "one_step_force_max_absolute_difference": 1.7763568394002505e-15,
+      "one_step_force_relative_scale_difference": 6.730121322345674e-17
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 5,
+      "initial_force_max_absolute_difference": 1.7763568394002505e-15,
+      "initial_force_relative_scale_difference": 5.867334115055467e-17,
+      "one_step_state_max_absolute_difference": 1.3877787807814457e-17,
+      "one_step_state_relative_scale_difference": 6.4527945625525834e-18,
+      "one_step_force_max_absolute_difference": 3.552713678800501e-15,
+      "one_step_force_relative_scale_difference": 1.9515259275305416e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 10,
+      "initial_force_max_absolute_difference": 3.552713678800501e-15,
+      "initial_force_relative_scale_difference": 1.0686081206199727e-16,
+      "one_step_state_max_absolute_difference": 2.220446049250313e-16,
+      "one_step_state_relative_scale_difference": 1.0450476039887486e-16,
+      "one_step_force_max_absolute_difference": 7.105427357601002e-15,
+      "one_step_force_relative_scale_difference": 1.3461944229630316e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 25,
+      "initial_force_max_absolute_difference": 1.4210854715202004e-14,
+      "initial_force_relative_scale_difference": 1.772103247171359e-16,
+      "one_step_state_max_absolute_difference": 2.7755575615628914e-17,
+      "one_step_state_relative_scale_difference": 1.0248946831933778e-17,
+      "one_step_force_max_absolute_difference": 2.4868995751603507e-14,
+      "one_step_force_relative_scale_difference": 4.0254819235038093e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 50,
+      "initial_force_max_absolute_difference": 1.4210854715202004e-14,
+      "initial_force_relative_scale_difference": 2.44440311120535e-16,
+      "one_step_state_max_absolute_difference": 2.7755575615628914e-17,
+      "one_step_state_relative_scale_difference": 1.1166084562726337e-17,
+      "one_step_force_max_absolute_difference": 2.842170943040401e-14,
+      "one_step_force_relative_scale_difference": 4.967085548951542e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 100,
+      "initial_force_max_absolute_difference": 2.1316282072803006e-14,
+      "initial_force_relative_scale_difference": 2.1312892035853831e-16,
+      "one_step_state_max_absolute_difference": 6.938893903907228e-18,
+      "one_step_state_relative_scale_difference": 2.331044451249587e-18,
+      "one_step_force_max_absolute_difference": 1.4210854715202004e-14,
+      "one_step_force_relative_scale_difference": 1.6501067842890568e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 200,
+      "initial_force_max_absolute_difference": 1.4210854715202004e-14,
+      "initial_force_relative_scale_difference": 1.8733387852142994e-16,
+      "one_step_state_max_absolute_difference": 2.220446049250313e-16,
+      "one_step_state_relative_scale_difference": 8.408286909766094e-17,
+      "one_step_force_max_absolute_difference": 1.4210854715202004e-14,
+      "one_step_force_relative_scale_difference": 1.698856744654942e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 300,
+      "initial_force_max_absolute_difference": 1.4210854715202004e-14,
+      "initial_force_relative_scale_difference": 2.7685490714602505e-16,
+      "one_step_state_max_absolute_difference": 5.551115123125783e-17,
+      "one_step_state_relative_scale_difference": 2.209425281854195e-17,
+      "one_step_force_max_absolute_difference": 2.842170943040401e-14,
+      "one_step_force_relative_scale_difference": 5.541795000824717e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 400,
+      "initial_force_max_absolute_difference": 1.4210854715202004e-14,
+      "initial_force_relative_scale_difference": 1.76633860285864e-16,
+      "one_step_state_max_absolute_difference": 2.220446049250313e-16,
+      "one_step_state_relative_scale_difference": 7.15067162261695e-17,
+      "one_step_force_max_absolute_difference": 7.105427357601002e-15,
+      "one_step_force_relative_scale_difference": 2.260566822762996e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 600,
+      "initial_force_max_absolute_difference": 2.842170943040401e-14,
+      "initial_force_relative_scale_difference": 3.9262538581683463e-16,
+      "one_step_state_max_absolute_difference": 5.551115123125783e-17,
+      "one_step_state_relative_scale_difference": 1.5709775340251403e-17,
+      "one_step_force_max_absolute_difference": 4.263256414560601e-14,
+      "one_step_force_relative_scale_difference": 6.197303222432401e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 800,
+      "initial_force_max_absolute_difference": 1.0658141036401503e-14,
+      "initial_force_relative_scale_difference": 1.2497402506495015e-16,
+      "one_step_state_max_absolute_difference": 1.1102230246251565e-16,
+      "one_step_state_relative_scale_difference": 4.4075141787706864e-17,
+      "one_step_force_max_absolute_difference": 1.4210854715202004e-14,
+      "one_step_force_relative_scale_difference": 1.7703768956568606e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 1000,
+      "initial_force_max_absolute_difference": 1.7763568394002505e-14,
+      "initial_force_relative_scale_difference": 3.090360713251781e-16,
+      "one_step_state_max_absolute_difference": 5.551115123125783e-17,
+      "one_step_state_relative_scale_difference": 2.2234810006359346e-17,
+      "one_step_force_max_absolute_difference": 1.4210854715202004e-14,
+      "one_step_force_relative_scale_difference": 2.437852644178261e-16
+    },
+    {
+      "trajectory": "serial",
+      "checkpoint_step": 1250,
+      "initial_force_max_absolute_difference": 2.1316282072803006e-14,
+      "initial_force_relative_scale_difference": 3.9414541304676e-16,
+      "one_step_state_max_absolute_difference": 1.1102230246251565e-16,
+      "one_step_state_relative_scale_difference": 4.286180443117192e-17,
+      "one_step_force_max_absolute_difference": 1.4210854715202004e-14,
+      "one_step_force_relative_scale_difference": 1.847765504612205e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 0,
+      "initial_force_max_absolute_difference": 1.6930901125533637e-15,
+      "initial_force_relative_scale_difference": 1.6930901125533637e-15,
+      "one_step_state_max_absolute_difference": 1.3877787807814457e-17,
+      "one_step_state_relative_scale_difference": 6.059690042405103e-18,
+      "one_step_force_max_absolute_difference": 1.3652273755937472e-15,
+      "one_step_force_relative_scale_difference": 4.0563753948496797e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 1,
+      "initial_force_max_absolute_difference": 1.5543122344752192e-15,
+      "initial_force_relative_scale_difference": 1.5543122344752192e-15,
+      "one_step_state_max_absolute_difference": 1.734723475976807e-18,
+      "one_step_state_relative_scale_difference": 7.790810003883277e-19,
+      "one_step_force_max_absolute_difference": 1.27675647831893e-15,
+      "one_step_force_relative_scale_difference": 1.6565752150310118e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 2,
+      "initial_force_max_absolute_difference": 1.3322676295501878e-15,
+      "initial_force_relative_scale_difference": 1.7286002243801866e-16,
+      "one_step_state_max_absolute_difference": 2.7755575615628914e-17,
+      "one_step_state_relative_scale_difference": 1.3679262124543393e-17,
+      "one_step_force_max_absolute_difference": 1.7208456881689926e-15,
+      "one_step_force_relative_scale_difference": 6.519805031022372e-17
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 5,
+      "initial_force_max_absolute_difference": 3.552713678800501e-15,
+      "initial_force_relative_scale_difference": 1.1734668230110934e-16,
+      "one_step_state_max_absolute_difference": 2.220446049250313e-16,
+      "one_step_state_relative_scale_difference": 1.0324471300084133e-16,
+      "one_step_force_max_absolute_difference": 3.552713678800501e-15,
+      "one_step_force_relative_scale_difference": 1.9515259275305416e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 10,
+      "initial_force_max_absolute_difference": 3.552713678800501e-15,
+      "initial_force_relative_scale_difference": 1.0686081206199727e-16,
+      "one_step_state_max_absolute_difference": 3.469446951953614e-18,
+      "one_step_state_relative_scale_difference": 1.6328868812324197e-18,
+      "one_step_force_max_absolute_difference": 7.105427357601002e-15,
+      "one_step_force_relative_scale_difference": 1.3461944229630316e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 25,
+      "initial_force_max_absolute_difference": 1.4210854715202004e-14,
+      "initial_force_relative_scale_difference": 1.772103247171359e-16,
+      "one_step_state_max_absolute_difference": 1.1102230246251565e-16,
+      "one_step_state_relative_scale_difference": 4.0995787327735114e-17,
+      "one_step_force_max_absolute_difference": 2.4868995751603507e-14,
+      "one_step_force_relative_scale_difference": 4.0254819235038093e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 50,
+      "initial_force_max_absolute_difference": 1.4210854715202004e-14,
+      "initial_force_relative_scale_difference": 2.44440311120535e-16,
+      "one_step_state_max_absolute_difference": 2.220446049250313e-16,
+      "one_step_state_relative_scale_difference": 8.932867650181069e-17,
+      "one_step_force_max_absolute_difference": 2.1316282072803006e-14,
+      "one_step_force_relative_scale_difference": 3.7253141617136566e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 100,
+      "initial_force_max_absolute_difference": 2.842170943040401e-14,
+      "initial_force_relative_scale_difference": 2.841718938113915e-16,
+      "one_step_state_max_absolute_difference": 1.1102230246251565e-16,
+      "one_step_state_relative_scale_difference": 3.729671121998693e-17,
+      "one_step_force_max_absolute_difference": 1.7763568394002505e-14,
+      "one_step_force_relative_scale_difference": 2.062633480361402e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 200,
+      "initial_force_max_absolute_difference": 2.1316282072803006e-14,
+      "initial_force_relative_scale_difference": 2.8100080563213015e-16,
+      "one_step_state_max_absolute_difference": 5.551115123125783e-17,
+      "one_step_state_relative_scale_difference": 2.1020401260142797e-17,
+      "one_step_force_max_absolute_difference": 8.881784197001252e-15,
+      "one_step_force_relative_scale_difference": 1.0617854547028611e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 300,
+      "initial_force_max_absolute_difference": 1.4210854715202004e-14,
+      "initial_force_relative_scale_difference": 2.6644477087274455e-16,
+      "one_step_state_max_absolute_difference": 2.220446049250313e-16,
+      "one_step_state_relative_scale_difference": 8.843542565114083e-17,
+      "one_step_force_max_absolute_difference": 1.4210854715202004e-14,
+      "one_step_force_relative_scale_difference": 2.6956571952272376e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 400,
+      "initial_force_max_absolute_difference": 1.4210854715202004e-14,
+      "initial_force_relative_scale_difference": 2.128035622240122e-16,
+      "one_step_state_max_absolute_difference": 1.1102230246251565e-16,
+      "one_step_state_relative_scale_difference": 4.44423414338654e-17,
+      "one_step_force_max_absolute_difference": 4.263256414560601e-14,
+      "one_step_force_relative_scale_difference": 6.538687213673382e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 600,
+      "initial_force_max_absolute_difference": 2.842170943040401e-14,
+      "initial_force_relative_scale_difference": 5.030162021770349e-16,
+      "one_step_state_max_absolute_difference": 4.440892098500626e-16,
+      "one_step_state_relative_scale_difference": 1.4127285901755687e-16,
+      "one_step_force_max_absolute_difference": 1.4210854715202004e-14,
+      "one_step_force_relative_scale_difference": 3.1704710211773883e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 800,
+      "initial_force_max_absolute_difference": 1.4210854715202004e-14,
+      "initial_force_relative_scale_difference": 2.823142826066474e-16,
+      "one_step_state_max_absolute_difference": 5.551115123125783e-17,
+      "one_step_state_relative_scale_difference": 2.227151833628317e-17,
+      "one_step_force_max_absolute_difference": 1.0658141036401503e-14,
+      "one_step_force_relative_scale_difference": 2.0258004461413354e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 1000,
+      "initial_force_max_absolute_difference": 7.105427357601002e-15,
+      "initial_force_relative_scale_difference": 1.6197351800730405e-16,
+      "one_step_state_max_absolute_difference": 6.938893903907228e-18,
+      "one_step_state_relative_scale_difference": 2.5590111090655538e-18,
+      "one_step_force_max_absolute_difference": 7.105427357601002e-15,
+      "one_step_force_relative_scale_difference": 1.2328656837714586e-16
+    },
+    {
+      "trajectory": "omp4_0",
+      "checkpoint_step": 1250,
+      "initial_force_max_absolute_difference": 1.4210854715202004e-14,
+      "initial_force_relative_scale_difference": 1.4344214929493052e-16,
+      "one_step_state_max_absolute_difference": 2.220446049250313e-16,
+      "one_step_state_relative_scale_difference": 7.927276874433117e-17,
+      "one_step_force_max_absolute_difference": 1.4210854715202004e-14,
+      "one_step_force_relative_scale_difference": 1.2216404262522468e-16
+    }
+  ],
+  "trajectory_difference": [
+    {
+      "step": 0,
+      "time": 0.0,
+      "rms_position_difference": 0.0,
+      "max_position_component_difference": 0.0
+    },
+    {
+      "step": 1,
+      "time": 0.04,
+      "rms_position_difference": 0.0,
+      "max_position_component_difference": 0.0
+    },
+    {
+      "step": 2,
+      "time": 0.08,
+      "rms_position_difference": 0.0,
+      "max_position_component_difference": 0.0
+    },
+    {
+      "step": 5,
+      "time": 0.2,
+      "rms_position_difference": 1.6024689053196365e-17,
+      "max_position_component_difference": 2.220446049250313e-16
+    },
+    {
+      "step": 10,
+      "time": 0.4,
+      "rms_position_difference": 1.6024689053196365e-17,
+      "max_position_component_difference": 2.220446049250313e-16
+    },
+    {
+      "step": 25,
+      "time": 1.0,
+      "rms_position_difference": 2.013076648147012e-17,
+      "max_position_component_difference": 2.220446049250313e-16
+    },
+    {
+      "step": 50,
+      "time": 2.0,
+      "rms_position_difference": 3.7185177866846614e-16,
+      "max_position_component_difference": 2.6645352591003757e-15
+    },
+    {
+      "step": 100,
+      "time": 4.0,
+      "rms_position_difference": 3.770190849515524e-13,
+      "max_position_component_difference": 3.774314194515682e-12
+    },
+    {
+      "step": 200,
+      "time": 8.0,
+      "rms_position_difference": 3.0295804343332923e-05,
+      "max_position_component_difference": 0.0003041334643230087
+    },
+    {
+      "step": 300,
+      "time": 12.0,
+      "rms_position_difference": 0.09585867960426242,
+      "max_position_component_difference": 0.8549619174829055
+    },
+    {
+      "step": 400,
+      "time": 16.0,
+      "rms_position_difference": 0.4152650208334107,
+      "max_position_component_difference": 2.488879358521996
+    },
+    {
+      "step": 600,
+      "time": 24.0,
+      "rms_position_difference": 0.8971442521326206,
+      "max_position_component_difference": 2.470540390310372
+    },
+    {
+      "step": 800,
+      "time": 32.0,
+      "rms_position_difference": 1.2144069687184837,
+      "max_position_component_difference": 2.501357937014276
+    },
+    {
+      "step": 1000,
+      "time": 40.0,
+      "rms_position_difference": 1.3705001160753372,
+      "max_position_component_difference": 2.5043691155097023
+    },
+    {
+      "step": 1250,
+      "time": 50.0,
+      "rms_position_difference": 1.41560948708769,
+      "max_position_component_difference": 2.512415112545592
+    }
+  ],
+  "serial_vs_omp1_energy_exact": true,
+  "perturbations": [
+    {
+      "run": "serial_ulp_0",
+      "particle_id": 0,
+      "field": "vx",
+      "before": 0.7645304346364893,
+      "after": 0.7645304346364894,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "run": "serial_ulp_1",
+      "particle_id": 1,
+      "field": "vy",
+      "before": -0.6343747825439792,
+      "after": -0.6343747825439793,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "run": "serial_ulp_2",
+      "particle_id": 2,
+      "field": "vz",
+      "before": 0.02830770591484839,
+      "after": 0.028307705914848394,
+      "difference": 3.469446951953614e-18
+    },
+    {
+      "run": "serial_ulp_3",
+      "particle_id": 3,
+      "field": "vx",
+      "before": -0.6425920550371866,
+      "after": -0.6425920550371867,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "run": "serial_ulp_4",
+      "particle_id": 4,
+      "field": "vy",
+      "before": -0.9183693336051628,
+      "after": -0.9183693336051627,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "run": "serial_ulp_5",
+      "particle_id": 5,
+      "field": "vz",
+      "before": -0.762379826364098,
+      "after": -0.7623798263640981,
+      "difference": -1.1102230246251565e-16
+    },
+    {
+      "run": "serial_ulp_6",
+      "particle_id": 0,
+      "field": "vx",
+      "before": 0.7645304346364893,
+      "after": 0.7645304346364894,
+      "difference": 1.1102230246251565e-16
+    },
+    {
+      "run": "serial_ulp_7",
+      "particle_id": 1,
+      "field": "vy",
+      "before": -0.6343747825439792,
+      "after": -0.6343747825439793,
+      "difference": -1.1102230246251565e-16
+    }
+  ],
+  "metadata": {
+    "initial_csv_sha256": "ef99e7264ae05419e4887c3ff0397ab3046380211db74955a3fe85f6457c5342",
+    "particles": 64,
+    "dt": 0.04,
+    "duration": 50,
+    "repeats": 8,
+    "independent_energy_sum": "Serial fixed pair order with long-double accumulation",
+    "note": "No integration formulas changed. ULP changes probe sensitivity; this is not an ensemble-equivalence proof."
+  }
+}

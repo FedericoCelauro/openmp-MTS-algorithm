@@ -1,0 +1,3 @@
+# Optional: validation energy plots and benchmark reports.
+numpy
+matplotlib

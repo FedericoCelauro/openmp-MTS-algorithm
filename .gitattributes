@@ -1,0 +1,18 @@
+# Keep source and documentation line endings consistent across platforms.
+*.cpp text eol=lf
+*.h text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+Makefile text eol=lf
+LICENSE text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Preserve the exact bytes of scientific inputs/results, including CSV CRLF.
+# Input hashes in validation reports must survive a checkout unchanged.
+*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Existing configurations allow blank final lines; preserve these fixtures.
+**/jobs/**/config.txt -text whitespace=blank-at-eol,-blank-at-eof,space-before-tab,cr-at-eol
+*.png binary

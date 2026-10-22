@@ -1,0 +1,40 @@
+# Compiled binaries and object/dependency files (all three variants).
+**/build/
+**/bin/
+*.o
+*.d
+
+# Simulation output; keep configs and initial_conf.csv as runnable examples.
+**/jobs/*/energy.csv
+**/jobs/*/OutputTimes/
+# Output schedules are unused by the simulation loop.
+**/jobs/*/OutputTimes.txt
+
+# Local IDE metadata.
+**/.project
+**/.cproject
+**/.settings/
+**/.clangd
+.vscode/
+.idea/
+
+# Python caches and local environments.
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local credentials and agent configuration.
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+.agents/
+
+# OS/editor temporary files.
+.DS_Store
+*~
+*.swp
+core
+core.[0-9]*

@@ -1,0 +1,1615 @@
+{
+  "metadata": {
+    "cpu_model": "Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz",
+    "logical_cpus": 8,
+    "allowed_cpus": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "platform": "Linux-6.4.0-150600.23.103-default-x86_64-with-glibc2.38",
+    "compiler": "g++ (SUSE Linux) 7.5.0",
+    "build_mode": "releaseO3",
+    "repeats": 3,
+    "warmups_per_case_mode_configuration": 1,
+    "omp_settings": {
+      "OMP_DYNAMIC": "FALSE",
+      "OMP_PROC_BIND": "close",
+      "OMP_PLACES": "cores",
+      "OMP_WAIT_POLICY": "ACTIVE"
+    },
+    "dt": 0.01,
+    "density": 0.5,
+    "masses": [
+      1,
+      100
+    ],
+    "ratio": 10,
+    "seed": 42,
+    "fairness": "Same initial CSV, macro step count and physical duration within each case; not matched-error timing.",
+    "scope": "One machine, warm filesystem caches, sequential runs; no claim of exclusive CPU access or universal speedup."
+  },
+  "cases": [
+    {
+      "case": "N64_light0.1",
+      "particles": 64,
+      "light_fraction": 0.1,
+      "macro_steps": 200,
+      "duration": 2.0,
+      "initial_csv_sha256": "6f88af174b56ff871cafc12d9ac6f0c7699e46ccb31a8602238d9b42623dbe23",
+      "light_count": 6,
+      "heavy_count": 58,
+      "uniform_pair_visits": 20160,
+      "mts_pair_visits": 5631,
+      "pair_visit_reduction": 3.580181140117208
+    },
+    {
+      "case": "N512_light0.01",
+      "particles": 512,
+      "light_fraction": 0.01,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "initial_csv_sha256": "143c2d70c63bdd70db5ef900d8e2fee647bc1bc4996fd34f38fe7919560a878c",
+      "light_count": 5,
+      "heavy_count": 507,
+      "uniform_pair_visits": 1308160,
+      "mts_pair_visits": 156256,
+      "pair_visit_reduction": 8.371902518943273
+    },
+    {
+      "case": "N512_light0.1",
+      "particles": 512,
+      "light_fraction": 0.1,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "initial_csv_sha256": "1e38f0f5ff900d92d234e8a9a42952d7631ed263d6299adbc1b93e004d367266",
+      "light_count": 51,
+      "heavy_count": 461,
+      "uniform_pair_visits": 1308160,
+      "mts_pair_visits": 377401,
+      "pair_visit_reduction": 3.4662335287929813
+    },
+    {
+      "case": "N512_light0.5",
+      "particles": 512,
+      "light_fraction": 0.5,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "initial_csv_sha256": "34383bc32fec0f1d56f5b830b5c60afa87e100c2bc1466925d5a5b988f1a1925",
+      "light_count": 256,
+      "heavy_count": 256,
+      "uniform_pair_visits": 1308160,
+      "mts_pair_visits": 1079936,
+      "pair_visit_reduction": 1.2113310418395165
+    }
+  ],
+  "summary": [
+    {
+      "case": "N64_light0.1",
+      "particles": 64,
+      "light_fraction": 0.1,
+      "macro_steps": 200,
+      "duration": 2.0,
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "median_seconds": 0.274436791,
+      "min_seconds": 0.257103345,
+      "max_seconds": 0.400105305,
+      "speedup_vs_uniform": 1.0
+    },
+    {
+      "case": "N64_light0.1",
+      "particles": 64,
+      "light_fraction": 0.1,
+      "macro_steps": 200,
+      "duration": 2.0,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "median_seconds": 0.08588976,
+      "min_seconds": 0.070392262,
+      "max_seconds": 0.119458581,
+      "speedup_vs_uniform": 3.1952213046118656
+    },
+    {
+      "case": "N64_light0.1",
+      "particles": 64,
+      "light_fraction": 0.1,
+      "macro_steps": 200,
+      "duration": 2.0,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "median_seconds": 0.096350068,
+      "min_seconds": 0.090782301,
+      "max_seconds": 0.111917298,
+      "speedup_vs_uniform": 2.8483300188226126
+    },
+    {
+      "case": "N64_light0.1",
+      "particles": 64,
+      "light_fraction": 0.1,
+      "macro_steps": 200,
+      "duration": 2.0,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "median_seconds": 0.09208405,
+      "min_seconds": 0.082775902,
+      "max_seconds": 0.120023765,
+      "speedup_vs_uniform": 2.98028584754906
+    },
+    {
+      "case": "N64_light0.1",
+      "particles": 64,
+      "light_fraction": 0.1,
+      "macro_steps": 200,
+      "duration": 2.0,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "median_seconds": 0.07017327,
+      "min_seconds": 0.069237079,
+      "max_seconds": 0.117505129,
+      "speedup_vs_uniform": 3.9108451266415263
+    },
+    {
+      "case": "N64_light0.1",
+      "particles": 64,
+      "light_fraction": 0.1,
+      "macro_steps": 200,
+      "duration": 2.0,
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "median_seconds": 0.5312129280064255,
+      "min_seconds": 0.49095154499809723,
+      "max_seconds": 0.5465380019886652,
+      "speedup_vs_uniform": 1.0
+    },
+    {
+      "case": "N64_light0.1",
+      "particles": 64,
+      "light_fraction": 0.1,
+      "macro_steps": 200,
+      "duration": 2.0,
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "median_seconds": 0.1596965659991838,
+      "min_seconds": 0.14911039799335413,
+      "max_seconds": 0.16045914900314528,
+      "speedup_vs_uniform": 3.3263891723829584
+    },
+    {
+      "case": "N64_light0.1",
+      "particles": 64,
+      "light_fraction": 0.1,
+      "macro_steps": 200,
+      "duration": 2.0,
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "median_seconds": 0.18142508299206384,
+      "min_seconds": 0.14268059699679725,
+      "max_seconds": 0.19238218799000606,
+      "speedup_vs_uniform": 2.928001570927558
+    },
+    {
+      "case": "N64_light0.1",
+      "particles": 64,
+      "light_fraction": 0.1,
+      "macro_steps": 200,
+      "duration": 2.0,
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "median_seconds": 0.18011472499347292,
+      "min_seconds": 0.1592576109978836,
+      "max_seconds": 0.18723422099719755,
+      "speedup_vs_uniform": 2.9493031623354273
+    },
+    {
+      "case": "N64_light0.1",
+      "particles": 64,
+      "light_fraction": 0.1,
+      "macro_steps": 200,
+      "duration": 2.0,
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "median_seconds": 0.17341452700202353,
+      "min_seconds": 0.11192315400694497,
+      "max_seconds": 0.18735309899784625,
+      "speedup_vs_uniform": 3.063255063978734
+    },
+    {
+      "case": "N512_light0.01",
+      "particles": 512,
+      "light_fraction": 0.01,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "median_seconds": 3.513884643,
+      "min_seconds": 3.467743917,
+      "max_seconds": 3.680021737,
+      "speedup_vs_uniform": 1.0
+    },
+    {
+      "case": "N512_light0.01",
+      "particles": 512,
+      "light_fraction": 0.01,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "median_seconds": 0.430785309,
+      "min_seconds": 0.405614795,
+      "max_seconds": 0.474037877,
+      "speedup_vs_uniform": 8.15692775400565
+    },
+    {
+      "case": "N512_light0.01",
+      "particles": 512,
+      "light_fraction": 0.01,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "median_seconds": 0.532430385,
+      "min_seconds": 0.478740548,
+      "max_seconds": 0.532604116,
+      "speedup_vs_uniform": 6.599707195523787
+    },
+    {
+      "case": "N512_light0.01",
+      "particles": 512,
+      "light_fraction": 0.01,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "median_seconds": 0.378348059,
+      "min_seconds": 0.375256403,
+      "max_seconds": 0.424150763,
+      "speedup_vs_uniform": 9.287439328451795
+    },
+    {
+      "case": "N512_light0.01",
+      "particles": 512,
+      "light_fraction": 0.01,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "median_seconds": 0.288213245,
+      "min_seconds": 0.266184069,
+      "max_seconds": 0.314813017,
+      "speedup_vs_uniform": 12.19196100095955
+    },
+    {
+      "case": "N512_light0.01",
+      "particles": 512,
+      "light_fraction": 0.01,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "median_seconds": 3.7895029570063343,
+      "min_seconds": 3.541235393000534,
+      "max_seconds": 3.816834907003795,
+      "speedup_vs_uniform": 1.0
+    },
+    {
+      "case": "N512_light0.01",
+      "particles": 512,
+      "light_fraction": 0.01,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "median_seconds": 0.4947663100028876,
+      "min_seconds": 0.47389903699513525,
+      "max_seconds": 0.4970947760011768,
+      "speedup_vs_uniform": 7.659177434664493
+    },
+    {
+      "case": "N512_light0.01",
+      "particles": 512,
+      "light_fraction": 0.01,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "median_seconds": 0.6030161020025844,
+      "min_seconds": 0.5992348250001669,
+      "max_seconds": 0.6132617749972269,
+      "speedup_vs_uniform": 6.28424837151379
+    },
+    {
+      "case": "N512_light0.01",
+      "particles": 512,
+      "light_fraction": 0.01,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "median_seconds": 0.4955750279914355,
+      "min_seconds": 0.4463876159861684,
+      "max_seconds": 0.5193762389972107,
+      "speedup_vs_uniform": 7.646678591464105
+    },
+    {
+      "case": "N512_light0.01",
+      "particles": 512,
+      "light_fraction": 0.01,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "median_seconds": 0.3466624669963494,
+      "min_seconds": 0.3402269989892375,
+      "max_seconds": 0.3541696169995703,
+      "speedup_vs_uniform": 10.931390957435957
+    },
+    {
+      "case": "N512_light0.1",
+      "particles": 512,
+      "light_fraction": 0.1,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "median_seconds": 3.511871698,
+      "min_seconds": 3.351424871,
+      "max_seconds": 3.585113465,
+      "speedup_vs_uniform": 1.0
+    },
+    {
+      "case": "N512_light0.1",
+      "particles": 512,
+      "light_fraction": 0.1,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "median_seconds": 1.032017431,
+      "min_seconds": 0.870418614,
+      "max_seconds": 1.045702628,
+      "speedup_vs_uniform": 3.4029189745342583
+    },
+    {
+      "case": "N512_light0.1",
+      "particles": 512,
+      "light_fraction": 0.1,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "median_seconds": 1.257094488,
+      "min_seconds": 1.233508067,
+      "max_seconds": 1.261655849,
+      "speedup_vs_uniform": 2.7936417918650522
+    },
+    {
+      "case": "N512_light0.1",
+      "particles": 512,
+      "light_fraction": 0.1,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "median_seconds": 0.853017883,
+      "min_seconds": 0.834558055,
+      "max_seconds": 0.884208013,
+      "speedup_vs_uniform": 4.1169965694611355
+    },
+    {
+      "case": "N512_light0.1",
+      "particles": 512,
+      "light_fraction": 0.1,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "median_seconds": 0.5511539,
+      "min_seconds": 0.538730358,
+      "max_seconds": 0.559005183,
+      "speedup_vs_uniform": 6.371853121242543
+    },
+    {
+      "case": "N512_light0.1",
+      "particles": 512,
+      "light_fraction": 0.1,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "median_seconds": 3.565978536993498,
+      "min_seconds": 3.5609707850089762,
+      "max_seconds": 3.6210749610036146,
+      "speedup_vs_uniform": 1.0
+    },
+    {
+      "case": "N512_light0.1",
+      "particles": 512,
+      "light_fraction": 0.1,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "median_seconds": 1.1329808750015218,
+      "min_seconds": 1.0622010419901926,
+      "max_seconds": 1.167249140999047,
+      "speedup_vs_uniform": 3.1474304780199476
+    },
+    {
+      "case": "N512_light0.1",
+      "particles": 512,
+      "light_fraction": 0.1,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "median_seconds": 1.3828295709972735,
+      "min_seconds": 1.3342133120022481,
+      "max_seconds": 1.5017343970102957,
+      "speedup_vs_uniform": 2.5787549035574746
+    },
+    {
+      "case": "N512_light0.1",
+      "particles": 512,
+      "light_fraction": 0.1,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "median_seconds": 0.9086137370031793,
+      "min_seconds": 0.87769156700233,
+      "max_seconds": 1.03083697699185,
+      "speedup_vs_uniform": 3.924636390326796
+    },
+    {
+      "case": "N512_light0.1",
+      "particles": 512,
+      "light_fraction": 0.1,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "median_seconds": 0.6308794479991775,
+      "min_seconds": 0.5691852799936896,
+      "max_seconds": 0.6514246269944124,
+      "speedup_vs_uniform": 5.652392938623905
+    },
+    {
+      "case": "N512_light0.5",
+      "particles": 512,
+      "light_fraction": 0.5,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "median_seconds": 3.574662933,
+      "min_seconds": 3.458610233,
+      "max_seconds": 3.775321666,
+      "speedup_vs_uniform": 1.0
+    },
+    {
+      "case": "N512_light0.5",
+      "particles": 512,
+      "light_fraction": 0.5,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "median_seconds": 2.95485649,
+      "min_seconds": 2.861509707,
+      "max_seconds": 2.981853185,
+      "speedup_vs_uniform": 1.2097585602202967
+    },
+    {
+      "case": "N512_light0.5",
+      "particles": 512,
+      "light_fraction": 0.5,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "median_seconds": 3.503440041,
+      "min_seconds": 3.250513097,
+      "max_seconds": 3.700387334,
+      "speedup_vs_uniform": 1.0203294165638612
+    },
+    {
+      "case": "N512_light0.5",
+      "particles": 512,
+      "light_fraction": 0.5,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "median_seconds": 2.399496948,
+      "min_seconds": 2.362727539,
+      "max_seconds": 2.405868633,
+      "speedup_vs_uniform": 1.4897551488779806
+    },
+    {
+      "case": "N512_light0.5",
+      "particles": 512,
+      "light_fraction": 0.5,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "median_seconds": 1.530597288,
+      "min_seconds": 1.48857535,
+      "max_seconds": 1.578280641,
+      "speedup_vs_uniform": 2.3354692713920446
+    },
+    {
+      "case": "N512_light0.5",
+      "particles": 512,
+      "light_fraction": 0.5,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "median_seconds": 3.340575373003958,
+      "min_seconds": 3.3087989680061582,
+      "max_seconds": 3.428974124006345,
+      "speedup_vs_uniform": 1.0
+    },
+    {
+      "case": "N512_light0.5",
+      "particles": 512,
+      "light_fraction": 0.5,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "median_seconds": 2.7582303500093985,
+      "min_seconds": 2.6864715319970855,
+      "max_seconds": 2.7971540250000544,
+      "speedup_vs_uniform": 1.2111299453262034
+    },
+    {
+      "case": "N512_light0.5",
+      "particles": 512,
+      "light_fraction": 0.5,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "median_seconds": 3.4011503729998367,
+      "min_seconds": 3.3655548139940947,
+      "max_seconds": 3.4629714179900475,
+      "speedup_vs_uniform": 0.9821898495059919
+    },
+    {
+      "case": "N512_light0.5",
+      "particles": 512,
+      "light_fraction": 0.5,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "median_seconds": 2.489359629005776,
+      "min_seconds": 2.320359469013056,
+      "max_seconds": 2.496625525003765,
+      "speedup_vs_uniform": 1.3419416520135938
+    },
+    {
+      "case": "N512_light0.5",
+      "particles": 512,
+      "light_fraction": 0.5,
+      "macro_steps": 30,
+      "duration": 0.3,
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "median_seconds": 1.5012033569946652,
+      "min_seconds": 1.4569151579926256,
+      "max_seconds": 1.5976861209928757,
+      "speedup_vs_uniform": 2.225265056488832
+    }
+  ],
+  "samples": [
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 0.08588976
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 0.274436791
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 0.090782301
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 1,
+      "seconds": 0.082775902
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 1,
+      "seconds": 0.069237079
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 0.096350068
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 0.257103345
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 0.070392262
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 2,
+      "seconds": 0.07017327
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 2,
+      "seconds": 0.09208405
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 0.111917298
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 0.400105305
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 0.119458581
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 3,
+      "seconds": 0.117505129
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 3,
+      "seconds": 0.120023765
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 1,
+      "seconds": 0.11192315400694497
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 0.14268059699679725
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 1,
+      "seconds": 0.1592576109978836
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 0.5465380019886652
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 0.14911039799335413
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 0.19238218799000606
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 2,
+      "seconds": 0.18735309899784625
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 0.1596965659991838
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 2,
+      "seconds": 0.18011472499347292
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 0.5312129280064255
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 3,
+      "seconds": 0.17341452700202353
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 0.16045914900314528
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 3,
+      "seconds": 0.18723422099719755
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 0.18142508299206384
+    },
+    {
+      "case": "N64_light0.1",
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 0.49095154499809723
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 1,
+      "seconds": 0.375256403
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 0.478740548
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 3.467743917
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 1,
+      "seconds": 0.314813017
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 0.405614795
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 0.474037877
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 2,
+      "seconds": 0.424150763
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 0.532430385
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 2,
+      "seconds": 0.288213245
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 3.680021737
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 3,
+      "seconds": 0.266184069
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 3.513884643
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 3,
+      "seconds": 0.378348059
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 0.430785309
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 0.532604116
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 1,
+      "seconds": 0.4955750279914355
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 3.541235393000534
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 0.4970947760011768
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 0.6132617749972269
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 1,
+      "seconds": 0.3402269989892375
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 2,
+      "seconds": 0.4463876159861684
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 0.6030161020025844
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 2,
+      "seconds": 0.3541696169995703
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 3.816834907003795
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 0.47389903699513525
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 0.4947663100028876
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 3,
+      "seconds": 0.5193762389972107
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 0.5992348250001669
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 3,
+      "seconds": 0.3466624669963494
+    },
+    {
+      "case": "N512_light0.01",
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 3.7895029570063343
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 0.870418614
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 3.351424871
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 1.233508067
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 1,
+      "seconds": 0.853017883
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 1,
+      "seconds": 0.559005183
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 1.032017431
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 1.257094488
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 3.585113465
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 2,
+      "seconds": 0.538730358
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 2,
+      "seconds": 0.884208013
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 3.511871698
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 3,
+      "seconds": 0.5511539
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 3,
+      "seconds": 0.834558055
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 1.261655849
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 1.045702628
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 1.3828295709972735
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 1.0622010419901926
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 1,
+      "seconds": 0.87769156700233
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 3.5609707850089762
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 1,
+      "seconds": 0.6308794479991775
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 3.6210749610036146
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 2,
+      "seconds": 1.03083697699185
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 1.5017343970102957
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 1.1329808750015218
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 2,
+      "seconds": 0.6514246269944124
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 1.167249140999047
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 3.565978536993498
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 3,
+      "seconds": 0.9086137370031793
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 3,
+      "seconds": 0.5691852799936896
+    },
+    {
+      "case": "N512_light0.1",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 1.3342133120022481
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 1,
+      "seconds": 2.405868633
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 1,
+      "seconds": 1.530597288
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 2.95485649
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 3.700387334
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 3.775321666
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 2.981853185
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 3.574662933
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 2,
+      "seconds": 2.399496948
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 3.250513097
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 2,
+      "seconds": 1.48857535
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 3.503440041
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 3.458610233
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 3,
+      "seconds": 2.362727539
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 2.861509707
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "kernel",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 3,
+      "seconds": 1.578280641
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 3.4629714179900475
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 1,
+      "seconds": 1.5976861209928757
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 1,
+      "seconds": 2.489359629005776
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 3.428974124006345
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 1,
+      "seconds": 2.7971540250000544
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 2,
+      "seconds": 2.496625525003765
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 3.3655548139940947
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 3.340575373003958
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 2,
+      "seconds": 1.4569151579926256
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 2,
+      "seconds": 2.7582303500093985
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDNormal",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 3.3087989680061582
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDMultipleTimeSteps",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 2.6864715319970855
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 1,
+      "repetition": 3,
+      "seconds": 3.4011503729998367
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 2,
+      "repetition": 3,
+      "seconds": 2.320359469013056
+    },
+    {
+      "case": "N512_light0.5",
+      "mode": "application",
+      "variant": "MDMultipleTimeStepsOpenMP",
+      "threads": 4,
+      "repetition": 3,
+      "seconds": 1.5012033569946652
+    }
+  ]
+}

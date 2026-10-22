@@ -1,0 +1,30 @@
+name: Simulation checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [debug, releaseO2, releaseO3]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y g++ make libeigen3-dev python3
+      - name: Build and test all variants
+        run: python3 validation/run_tests.py --build-mode ${{ matrix.mode }}
+  sanitizers:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y g++ make libeigen3-dev python3
+      - name: Run address and undefined-behavior checks
+        env:
+          ASAN_OPTIONS: detect_leaks=1:halt_on_error=1
+          UBSAN_OPTIONS: halt_on_error=1:print_stacktrace=1
+        run: python3 validation/run_tests.py --sanitize
